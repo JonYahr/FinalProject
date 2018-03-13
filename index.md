@@ -1,3 +1,18 @@
+1. Project Description - What is the high level idea of your project? This should be similar to your daily log submission (but could have changed).
+
+2. Project Design - lower-level description. What technologies will you use, how will they integrate? The technologies that this project will utilize will be SpringMVC/SpringBoot, Slack API, MongoDB, TomcatApache. This is list is incomplete and there will be other technologies. What are the project’s use cases? Any other design docs that are necessary for me to understand your project
+
+3. Project Schedule - what will you have done at each checkpoint? What will the final project look like?
+
+4. Project Justification - why is your project interesting? Novelty - why is your project different than existing applications, and why should people use it?
+
+
+
+
+
+
+
+
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/JonYahr/FinalProject/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
