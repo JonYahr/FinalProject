@@ -1,10 +1,10 @@
-###1. Project Description - What is the high level idea of your project? This should be similar to your daily log submission (but could have changed).
+### 1. Project Description - What is the high level idea of your project? This should be similar to your daily log submission (but could have changed).
 
 Project Summary
 
 I intend on creating a website that helps the "Out of the Shell" club plan events and allows memebers to post information about themselves.  The purpose of the club is to help people make new friends by introducing them to other students who are struggling in finding a social circle.  The main functionality of the website would allow for members to create profiles that are accessible to other club members.  The profiles should include intrests, bios, fun facts, or anything that will allow  Additionally, a posting board that allows members to announce social gatherings would improve organization.
 
-###2. Project Design - lower-level description. What technologies will you use, how will they integrate? The technologies that this project will utilize will be SpringMVC/SpringBoot, Slack API, MongoDB, TomcatApache. This is list is incomplete and there will be other technologies. What are the project’s use cases? Any other design docs that are necessary for me to understand your project
+### 2. Project Design - lower-level description. What technologies will you use, how will they integrate? The technologies that this project will utilize will be SpringMVC/SpringBoot, Slack API, MongoDB, TomcatApache. This is list is incomplete and there will be other technologies. What are the project’s use cases? Any other design docs that are necessary for me to understand your project
 
 Project Features
 Create a splash page that communicates the goals of our club and that welcomes new users.
@@ -14,7 +14,7 @@ Provide the ability to edit the profile.
 Display a list of members with a hyperlink to their profile.
 Have a club chat that is integrated into the web application, which will allow for people to organize outings outside the group context.
 
-###3. Project Schedule - what will you have done at each checkpoint? What will the final project look like?
+### 3. Project Schedule - what will you have done at each checkpoint? What will the final project look like?
 
 Checkpoint 1
 Create a splash page that communicates the goals of our club and that welcomes new users.
@@ -29,7 +29,7 @@ Display a list of members with a hyperlink to their profile.
 Checkpoint 3
 Have a club chat that is integrated into the web application, which will allow for people to organize outings outside the group context.
 
-###4. Project Justification - why is your project interesting? Novelty - why is your project different than existing applications, and why should people use it?
+### 4. Project Justification - why is your project interesting? Novelty - why is your project different than existing applications, and why should people use it?
 
 How the Web Application Relates to the Club
 
