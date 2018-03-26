@@ -1,0 +1,16 @@
+{
+    "elements": {
+        "form:form": {
+            "attributes": {
+                "method": {},
+                "action": {}
+            }
+        },
+        "portlet:defineObjects": {}
+    },
+    "attributes": {
+        "th:text": {
+            "context": "p"
+        }
+    }
+}
