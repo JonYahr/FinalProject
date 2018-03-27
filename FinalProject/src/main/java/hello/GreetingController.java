@@ -29,20 +29,44 @@ public class GreetingController {
     
     @GetMapping("/Thankyou")
     public String addressSubmit(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
-        model.addAttribute("name", name);
         
+        /*
+        model.addAttribute("name", name);
+        model.addAttribute("major", major);
+        model.addAttribute("year", year);
+        model.addAttribute("bio", bio);
+        model.addAttribute("interests", interests);
+        */
+        //name, major, year, bio, interests
+
         return "Thankyou";
     }
     
+    @GetMapping("/Welcome")
+    public String welcome(Model model) {        
+        return "Welcome";
+    }
+    
+    @GetMapping("/Profile")
+    public String Profile(Model model) {        
+        return "Profile";
+    }
+    
+    @GetMapping("/Login")
+    public String Login(Model model) {        
+        return "Login";
+    }
+    
     @PostMapping("/Thankyou")
-    public String checkPersonInfo(@RequestParam(name="name") String name, @RequestParam(name="street") String street, @RequestParam(name="state") String state, @RequestParam(name="zip") String zip, Model model) {
+    public String checkPersonInfo(@RequestParam(name="name") String name, @RequestParam(name="major") String major, @RequestParam(name="year") String year, @RequestParam(name="bio", required=false) String bio, @RequestParam(name="interests", required=false) String interests, Model model) {
 
         System.out.println("it worked");
         
         model.addAttribute("name", name);
-        model.addAttribute("street", street);
-        model.addAttribute("state", state);
-        model.addAttribute("zip", zip);
+        model.addAttribute("major", major);
+        model.addAttribute("year", year);
+        model.addAttribute("bio", bio);
+        model.addAttribute("interests", interests);
         
         return "Thankyou";
         
