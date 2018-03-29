@@ -6,9 +6,9 @@
 
 package hello;
 
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Random;
 import org.json.simple.JSONObject;
 
 
@@ -32,13 +32,13 @@ public class SaveToJSON {
                     String interests = (String) jsonObject.get("interests");
         */
         
-        obj.put("name", userModel.getUsername());
-        obj.put("name", userModel.getPassword());
+        obj.put("username", userModel.getUsername());
+        obj.put("password", userModel.getPassword());
         obj.put("name", userModel.getName());
-        obj.put("name", userModel.getMajor());
-        obj.put("name", userModel.getYear());
-        obj.put("name", userModel.getBio());
-        obj.put("name", userModel.getInterests());
+        obj.put("major", userModel.getMajor());
+        obj.put("year", userModel.getYear());
+        obj.put("bio", userModel.getBio());
+        obj.put("interests", userModel.getInterests());
         
 
         
@@ -51,6 +51,9 @@ public class SaveToJSON {
                 file.write(System.getProperty( "line.separator" ));
                 System.out.println("Successfully Copied JSON Object to File...");
                 System.out.println("\nJSON Object: " + obj);
+                File f = new File("SavesJSON");
+                //Print absolute path
+                System.out.println(f.getAbsolutePath());
         }catch(IOException e){
             
         }

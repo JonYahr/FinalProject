@@ -39,6 +39,7 @@
       }
       .row.content {height:auto;} 
     }
+    
   </style>
 </head>
 <body>
@@ -61,7 +62,7 @@
         <li><a href="#">Events</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li><a href="Login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
       </ul>
     </div>
   </div>
@@ -75,47 +76,19 @@
       <p><a href="#">Link</a></p>
     </div>
     <div class="col-sm-8 text-left"> 
-      <h1>Your Profile</h1>
-
-            
-    <form action="/ProfileConfirmation" method="post" id="userform"><br> 
-     <table style="width:100%">
-
-         
- <tr>
-   <td>Username:</td>
-   <td><input type='text' name='username'><br></td>
- </tr>
- <tr>
-   <td>Password:</td>
-   <td><input type='password' name='password'><br></td>
- </tr>
- <tr>
-   <td>Name:</td>
-   <td><input type='text' name='name'><br></td>
- </tr>
- <tr>
-   <td>Major:</td>
-   <td><input type='text' name='major'><br></td>
- </tr>
- <tr>
-   <td>Year:</td>
-   <td><input type='text' name='year'><br></td>
- </tr>
- <tr>
-   <td>Bio:</td>
-   <td><input type='text' name='bio'><br></td>
- </tr>
- <tr>
-   <td>Interests:</td>
-   <td><input type='text' name='interests'><br></td>
- </tr>
- <tr>
-   <td> </td>
-   <td><input type='submit' value='Submit'><br></td>
- </tr>
-</table>
-</form>
+      
+    <h1>Thank you for your submission!</h1>
+    <h3>Name:</h3>
+    <p th:text="${name}" />
+    <h3>Major</h3>
+    <p th:text="${major}" />
+    <h3>Year</h3>
+    <p th:text="${year}" />
+    <h3>Bio</h3>
+    <p th:text="${bio}" />
+    <h3>Interests</h3>
+    <p th:text="${interests}" />
+ 
       
     </div>
     <div class="col-sm-2 sidenav">
