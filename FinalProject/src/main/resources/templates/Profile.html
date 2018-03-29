@@ -61,7 +61,7 @@
         <li><a href="#">Events</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          <li><a href="Login"><p style="margin: 0" th:text="${SESSION_username}"></p></a></li>
       </ul>
     </div>
   </div>
@@ -82,14 +82,6 @@
      <table style="width:100%">
 
          
- <tr>
-   <td>Username:</td>
-   <td><input type='text' name='username'><br></td>
- </tr>
- <tr>
-   <td>Password:</td>
-   <td><input type='password' name='password'><br></td>
- </tr>
  <tr>
    <td>Name:</td>
    <td><input type='text' name='name'><br></td>
@@ -116,6 +108,8 @@
  </tr>
 </table>
 </form>
+      
+      <br><br>
       
     </div>
     <div class="col-sm-2 sidenav">

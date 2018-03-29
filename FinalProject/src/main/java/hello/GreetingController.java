@@ -79,8 +79,7 @@ public class GreetingController {
     }
     
     @PostMapping("/ProfileConfirmation")
-    public String ProfileConfirmation(@RequestParam(name="username") String username, @RequestParam(name="password") String password, 
-            @RequestParam(name="name") String name, @RequestParam(name="major") String major, @RequestParam(name="year") String year, 
+    public String ProfileConfirmation(@RequestParam(name="name") String name, @RequestParam(name="major") String major, @RequestParam(name="year") String year, 
             @RequestParam(name="bio") String bio, @RequestParam(name="interests") String interests, Model model) {      
         
         model.addAttribute("SESSION_username", SESSION_username);

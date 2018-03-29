@@ -4,4 +4,6 @@
 {"password":"234","major":"","year":"","name":"","bio":"","interests":"","username":"asdfasdf"}
 {"password":"123","major":"","year":"","name":"","bio":"","interests":"","username":"asdf"}
 {"password":"","major":"","year":"","name":"","bio":"","interests":"","username":""}
-{"password":"test","major":"fdsa","year":"fda","name":"asdf","bio":"fdsa","interests":"fda","username":"test"}
+{"password":"test","major":"test","year":"test","name":"test","bio":"test","interests":"test","username":"test"}
+{"password":"test","major":"","year":"","name":"","bio":"","interests":"","username":"test"}
+{"password":"test","major":"","year":"","name":"","bio":"","interests":"","username":"test"}
