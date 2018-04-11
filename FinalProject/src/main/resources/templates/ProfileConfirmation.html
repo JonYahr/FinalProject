@@ -58,7 +58,7 @@
       <ul class="nav navbar-nav">
         <li class="active"><a href="Welcome">Home</a></li>
         <li><a href="Profile">Profile</a></li>
-        <li><a href="#">Members</a></li>
+        <li><a href="Members">Members</a></li>
         <li><a href="#">Events</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -80,6 +80,9 @@
     <h1>Thank you for your submission!</h1>
     <h3>Name:</h3>
     <p th:text="${name}" />
+    <h3>Facebook Profile:</h3>
+    <!--<p th:text="${url}" />-->
+    <img th:src='${url}' height="150" width="150">
     <h3>Major</h3>
     <p th:text="${major}" />
     <h3>Year</h3>
@@ -88,7 +91,7 @@
     <p th:text="${bio}" />
     <h3>Interests</h3>
     <p th:text="${interests}" />
- 
+     
       
     </div>
     <div class="col-sm-2 sidenav">

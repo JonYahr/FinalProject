@@ -51,6 +51,7 @@ public class LoadFromJSON {
                     String year = (String) jsonObject.get("year");
                     String bio = (String) jsonObject.get("bio");
                     String interests = (String) jsonObject.get("interests");
+                    String url = (String) jsonObject.get("url");
                     
                     userModel.setUsername(username);
                     userModel.setPassword(password);
@@ -59,6 +60,7 @@ public class LoadFromJSON {
                     userModel.setYear(year);
                     userModel.setBio(bio);
                     userModel.setInterests(interests);
+                    userModel.setUrl(url);
                     
                     userModelList.add(userModel);
 

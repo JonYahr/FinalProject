@@ -57,7 +57,7 @@
       <ul class="nav navbar-nav">
         <li class="active"><a href="Welcome">Home</a></li>
         <li><a href="Profile">Profile</a></li>
-        <li><a href="#">Members</a></li>
+        <li><a href="Members">Members</a></li>
         <li><a href="#">Events</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -71,7 +71,7 @@
   <div class="row content">
     <div class="col-sm-2 sidenav">
       <p><a href="https://groupme.com/en-US/">GroupMe</a></p>
-      <p><a href="#">Link</a></p>
+      <p><a href="">Link</a></p>
       <p><a href="#">Link</a></p>
     </div>
     <div class="col-sm-8 text-left"> 
@@ -84,24 +84,31 @@
          
  <tr>
    <td>Name:</td>
-   <td><input type='text' name='name'><br></td>
+   <td><input type='text' name='name' th:value="${name}"><br></td>
  </tr>
  <tr>
    <td>Major:</td>
-   <td><input type='text' name='major'><br></td>
+   <td><input type='text' name='major' th:value="${major}"><br></td>
  </tr>
  <tr>
    <td>Year:</td>
-   <td><input type='text' name='year'><br></td>
+   <td><input type='text' name='year' th:value="${year}"><br></td>
  </tr>
  <tr>
    <td>Bio:</td>
-   <td><input type='text' name='bio'><br></td>
+   <!--<td><input type='text' name='bio'><br></td>-->
+   <td><textarea id="confirmationText" class="text" cols="86" rows ="5" name="bio"><p th:text="${bio}" /></textarea></td>
  </tr>
  <tr>
    <td>Interests:</td>
-   <td><input type='text' name='interests'><br></td>
+   <!--<td><input type='text' name='interests'><br></td>-->
+   <td><textarea id="confirmationText" class="text" cols="86" rows ="5" name="interests"><p th:text="${interests}" /></textarea></td>
  </tr>
+  <tr>
+   <td>Facebook Profile:</td>
+   <td><input type='text' name='url' th:value="${url}"><br></td>
+ </tr>
+ <tr>
  <tr>
    <td> </td>
    <td><input type='submit' value='Submit'><br></td>

@@ -39,7 +39,6 @@
       }
       .row.content {height:auto;} 
     }
-    
   </style>
 </head>
 <body>
@@ -58,7 +57,7 @@
       <ul class="nav navbar-nav">
         <li class="active"><a href="Welcome">Home</a></li>
         <li><a href="Profile">Profile</a></li>
-        <li><a href="Members">Members</a></li>
+        <li><a href="#">Members</a></li>
         <li><a href="#">Events</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -72,12 +71,16 @@
   <div class="row content">
     <div class="col-sm-2 sidenav">
       <p><a href="https://groupme.com/en-US/">GroupMe</a></p>
-      <p><a href="">Link</a></p>
+      <p><a href="Members">Link</a></p>
       <p><a href="#">Link</a></p>
     </div>
     <div class="col-sm-8 text-left"> 
-      <h1><p style="margin: 0" th:text="'You signed up successfully, ' + ${SESSION_username} + '.'"></p></h1> 
- 
+      <h1>Our Members</h1>
+
+            
+   
+      
+      <br><br>
       
     </div>
     <div class="col-sm-2 sidenav">

@@ -18,6 +18,7 @@ public class User {
     private String year;
     private String bio;
     private String interests;
+    private String url;
     
     public User(){
         
@@ -88,6 +89,14 @@ public class User {
 
     public void setInterests(String interests) {
         this.interests = interests;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
     
 }

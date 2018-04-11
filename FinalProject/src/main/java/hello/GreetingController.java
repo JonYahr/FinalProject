@@ -6,6 +6,7 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
@@ -18,6 +19,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class GreetingController {
@@ -26,6 +29,8 @@ public class GreetingController {
     String SESSION_password = "";
     
     SaveToJSON save = new SaveToJSON();
+    LoadFromJSON saves = new LoadFromJSON();
+
     
     @GetMapping("/Index")
     public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
@@ -74,13 +79,27 @@ public class GreetingController {
         }
         
         model.addAttribute("SESSION_username", SESSION_username);
+        //model.addAttribute("name", saves.load().get(0).toString());
+        
+        for(User user : saves.load()){
+            if(user.getUsername().equals(SESSION_username)){
+                System.out.println(user.getName() + "THIS IS IN THE LOAD FUNCTION");
+                model.addAttribute("name", user.getName());
+                model.addAttribute("major", user.getMajor());
+                model.addAttribute("year", user.getYear());
+                model.addAttribute("bio", user.getBio());
+                model.addAttribute("interests", user.getInterests());
+                model.addAttribute("url", user.getUrl());
+                break;
+            }
+        }
         
         return "Profile";
     }
     
     @PostMapping("/ProfileConfirmation")
     public String ProfileConfirmation(@RequestParam(name="name") String name, @RequestParam(name="major") String major, @RequestParam(name="year") String year, 
-            @RequestParam(name="bio") String bio, @RequestParam(name="interests") String interests, Model model) {      
+            @RequestParam(name="bio") String bio, @RequestParam(name="interests") String interests, @RequestParam(name="url") String url, Model model) {      
         
         model.addAttribute("SESSION_username", SESSION_username);
         
@@ -115,6 +134,7 @@ public class GreetingController {
                 obj.put("year", year);
                 obj.put("bio", bio);
                 obj.put("interests", interests);
+                obj.put("url", url);
                         
                 fileContent.set(i, obj.toJSONString());
                 break;
@@ -132,6 +152,9 @@ public class GreetingController {
         model.addAttribute("year", year);
         model.addAttribute("bio", bio);
         model.addAttribute("interests", interests);
+        model.addAttribute("url", url);
+        //model.addAttribute("file", file);
+                
         
         return "ProfileConfirmation";
     }
@@ -247,6 +270,18 @@ public class GreetingController {
         
         return "File";
         
+    }
+    
+    private void saveFile(MultipartFile multipartFile, int id) throws Exception {
+        String destination = "/images/" + id + "/"  + multipartFile.getOriginalFilename();
+        File file = new File(destination);
+        multipartFile.transferTo(file);
+    }
+    
+    @GetMapping("/Members")
+    public String Members(Model model) {
+        model.addAttribute("SESSION_username", SESSION_username);
+        return "Members";
     }
     
 }

@@ -39,6 +39,7 @@ public class SaveToJSON {
         obj.put("year", userModel.getYear());
         obj.put("bio", userModel.getBio());
         obj.put("interests", userModel.getInterests());
+        obj.put("url", userModel.getUrl());
         
 
         
