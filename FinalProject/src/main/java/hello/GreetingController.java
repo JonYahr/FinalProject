@@ -201,6 +201,7 @@ public class GreetingController {
         user.setYear("");
         user.setBio("");
         user.setInterests("");
+        user.setUrl("");
         
         save.save(user);
                 
@@ -281,7 +282,47 @@ public class GreetingController {
     @GetMapping("/Members")
     public String Members(Model model) {
         model.addAttribute("SESSION_username", SESSION_username);
+        
+        String members = "";
+        
+        for(User user : saves.load()){
+            
+            members += "<table border = \"2\" cellpadding = \"10\">\n" +
+                        "	<tbody>\n" +
+                        "		<tr>\n" +
+                        "			<td width=\"150\"> <h3>Name</h3> </td>\n" +
+                        "			<td width=\"150\"> <h3>Major</h3> </td>\n" +
+                        "			<td width=\"150\"> <h3>Year</h3> </td>\n" +
+                        "			<td width=\"150\"> <h3>Bio</h3> </td>\n" +
+                        "			<td width=\"150\"> <h3>Interests</h3> </td>\n" +
+                        "			<td width=\"150\"> <h3>Profile Image</h3> </td>\n" +
+                        "		</tr>\n" +
+                        "		<tr>\n" +
+                        "			<td>" + user.getName() + "</td>\n" +
+                        "			<td>" + user.getMajor() + "</td>\n" +
+                        "			<td>" + user.getYear() + "</td>\n" +
+                        "			<td>" + user.getBio() + "</td>\n" +
+                        "			<td>" + user.getInterests() + "</td>\n" +
+                        "			<td><img src=" + user.getUrl() + " width=\"150\" height=\"150\"/></td>\n" +
+                        "		</tr>\n" +
+                        "	</tbody>\n" +
+                        "</table>";
+            
+            /*
+            user.setName("");
+        user.setMajor("");
+        user.setYear("");
+        user.setBio("");
+        user.setInterests("");
+        user.setUrl("");
+            */
+            
+        }
+        
+        model.addAttribute("members", members);
+        
         return "Members";
+        
     }
     
 }
