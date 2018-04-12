@@ -40,11 +40,11 @@ Checkpoint 2
 
 2) Provide the ability to edit the profile.
 
-3) Display a list of members with a hyperlink to their profile.
+3) Display a list of members with a hyperlink to their profile. (I decided that it made more sense design-wise to show all the data at once rather than hiding it behind a hyperlink.)
 
 Checkpoint 3
 
-1) Have a club chat that is integrated into the web application, which will allow for people to organize outings outside the group context.
+1) Have a club chat that is integrated into the web application, which will allow for people to organize outings outside the group context. (Jeremey pointed out that GroupMe could accomplish the same thing and he's correct.  Instead, I think I could take checkpoint 3 to implement a posting system that advertises actual club events.  We use our GroupMe so often that people will miss event postings since there's so many people chatting that not everyone looks back through the chat history.)
 
 ### 4. Project Justification - why is your project interesting? Novelty - why is your project different than existing applications, and why should people use it?
 
