@@ -66,6 +66,13 @@ public class GreetingController {
     @GetMapping("/Welcome")
     public String welcome(Model model) {
         model.addAttribute("SESSION_username", SESSION_username);
+        try{
+            Database d = new Database();
+            d.connectToDatabase();
+            d.addAddress("hello", "hello", "test", "test", "test");
+        }catch(Exception e){
+            e.printStackTrace();
+        }
         return "Welcome";
     }
     
