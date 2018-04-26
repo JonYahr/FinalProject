@@ -346,4 +346,10 @@ public class GreetingController {
         return "Events";
     }
     
+    @PostMapping("/Events")
+    public String EventsPost(Model model) {
+        model.addAttribute("SESSION_username", SESSION_username);
+        return "Events";
+    }
+    
 }

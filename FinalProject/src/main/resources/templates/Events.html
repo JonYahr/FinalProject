@@ -463,12 +463,44 @@ body {
     </div>
     <div class="col-sm-8 text-left"> 
       <h1>Events</h1>
-
       
       <div id="calendar"></div>
 <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
 
-<script>
+<form action="/Events" method="post" id="userform" style="color:black;"><br> 
+     <table style="width:50%; margin: 0 auto">
+
+         
+ <tr>
+   <td>Event Name:</td>
+   <td><input type='text' name='eventName' align="center"><br></td>
+ </tr>
+ <tr>
+   <td>Event Type:</td>
+   <td><input type='text' name='eventType'><br></td>
+ </tr>
+  <tr>
+   <td>Color:</td>
+   <td><input type='text' name='color'><br></td>
+ </tr>
+  <tr>
+   <td>Date:</td>
+   <td><input type='text' name='date' placeholder='YYYY-MM-DD'><br></td>
+ </tr>
+ <tr>
+   <td></td>
+   <td><input type='submit' value='Submit'><br></td>
+ </tr>
+ <tr>
+   <td> </td>
+   <td><br></td>
+ </tr>
+</table>
+</form>
+
+
+
+<script th:inline="javascript">
 !function() {
 
   var today = moment();
@@ -812,9 +844,8 @@ body {
     { eventName: 'Pizza Party', calendar: 'Other', color: 'green', date: '2018-04-04' },
     { eventName: 'Debate Night', calendar: 'Other', color: 'green', date: '2018-04-17' }
   ];
-
   
-
+data.push({ eventName: '<?=$_POST[eventName]?>', calendar: '<?=$_POST[eventType]?>', color: '<?=$_POST[color]?>', date: '<?=$_POST[date]?>' });
   
 
   var calendar = new Calendar('#calendar', data);
