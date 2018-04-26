@@ -66,6 +66,7 @@ public class GreetingController {
     @GetMapping("/Welcome")
     public String welcome(Model model) {
         model.addAttribute("SESSION_username", SESSION_username);
+        /*
         try{
             Database d = new Database();
             d.connectToDatabase();
@@ -73,6 +74,7 @@ public class GreetingController {
         }catch(Exception e){
             e.printStackTrace();
         }
+        */
         return "Welcome";
     }
     
@@ -231,6 +233,12 @@ public class GreetingController {
         return "Signup";
     }
     
+    @GetMapping("/Chat")
+    public String Chat(Model model) {
+        model.addAttribute("SESSION_username", SESSION_username);
+        return "Chat";
+    }
+    
     @PostMapping("/Thankyou")
     public String checkPersonInfo(@RequestParam(name="name") String name, @RequestParam(name="major") String major, @RequestParam(name="year") String year, @RequestParam(name="bio", required=false) String bio, @RequestParam(name="interests", required=false) String interests, Model model) {
 
@@ -330,6 +338,12 @@ public class GreetingController {
         
         return "Members";
         
+    }
+    
+    @GetMapping("/Events")
+    public String Events(Model model) {
+        model.addAttribute("SESSION_username", SESSION_username);
+        return "Events";
     }
     
 }

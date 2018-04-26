@@ -92,7 +92,7 @@ public class Database {
     }
 
     public ArrayList<String> getAddressList() {
-        ArrayList<String> addressInfo = new ArrayList<String>();;
+        ArrayList<String> addressInfo = new ArrayList<String>();
         String name = "";
         String street = "";
         String state = "";

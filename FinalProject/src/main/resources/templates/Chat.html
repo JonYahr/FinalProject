@@ -39,7 +39,6 @@
       }
       .row.content {height:auto;} 
     }
-    
   </style>
 </head>
 <body>
@@ -73,12 +72,14 @@
   <div class="row content">
     <div class="col-sm-2 sidenav">
       <p><a href="https://groupme.com/en-US/">GroupMe</a></p>
-      <p><a href="">Link</a></p>
+      <p><a href="#">Link</a></p>
       <p><a href="#">Link</a></p>
     </div>
     <div class="col-sm-8 text-left"> 
-      <h1><p style="margin: 0" th:text="'You signed up successfully, ' + ${SESSION_username} + '.'"></p></h1> 
- 
+      <h1>Chat</h1>
+
+            <iframe src="http://webchat.freenode.net?channels=OutOfTheShell&uio=d4" width="1000" height="600"></iframe>
+    
       
     </div>
     <div class="col-sm-2 sidenav">
